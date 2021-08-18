@@ -1,0 +1,2 @@
+Import-Module activedirectory
+Get-ADGroup "licencaenterprise" | Get-ADGroupMember -Recursive | Get-ADUser -Properties * | Select SamAccountName,GivenName,sn,Mail | Export-CSV c:\Metodologdddia1.csv
